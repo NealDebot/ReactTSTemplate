@@ -1,0 +1,33 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build"],
+
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "rootDir": "src",
+    "outDir": "build",
+    "jsx": "react",
+    "allowJs": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@interfaces/*": ["interfaces/*"],
+      "@sass/*": ["sass/*"],
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@util/*": ["util/*"],
+      "@service/*": ["service/*"]
+    }
+  }
+}
